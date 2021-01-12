@@ -52,13 +52,8 @@ type AuditUsed string
 
 const (
 	AuditCommand AuditUsed = "auditCommand"
-<<<<<<< HEAD
-	AuditConfig AuditUsed = "auditConfig"
-	AuditEnv AuditUsed = "auditEnv"
-=======
 	AuditConfig  AuditUsed = "auditConfig"
 	AuditEnv     AuditUsed = "auditEnv"
->>>>>>> 06ab5dfc801b040c2b3daa2aab4e227d2537b094
 )
 
 type testItem struct {
@@ -84,7 +79,7 @@ type compare struct {
 
 type testOutput struct {
 	testResult     bool
-	found      bool
+	found          bool
 	actualResult   string
 	ExpectedResult string
 }
@@ -238,7 +233,6 @@ func (t testItem) evaluate(s string) *testOutput {
 
 	result.flagFound = match
 	glog.V(3).Info(fmt.Sprintf("found %v", result.flagFound))
-
 
 	return result
 }
